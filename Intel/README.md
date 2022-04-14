@@ -1,0 +1,7 @@
+ Intel Quartus and Linux LXDE HPS files
+
+DE10-Nano Quartus project file DE10_NANO_SoC_GHRD.qsf starts the Quartus 18.1 project.  Files in folder /hps are managed on Windows 10, using notepad++.  The Makefile is run under the Intel FPGA Embedded Command Shell 18.1, which emulates a Linux environment using Cygwin.  The cross-compiled Linux  hps_adc_dsp executable is copied over to the DE10-Nano LXDE root folder using Bitwise client,.  Other useful Linux commands for plotting results are in the subfolder hps/linux.  Example recorded data files are in the subfolder hps/data.
+
+With the DE10-Nano Quartus output file loaded on the FPGA using Quartus Programmer, the Linux LXDE desktop terminal is used to execute hps_adc_dsp to set the FPGA drone upset target threshold and display real time upset events.
+
+hps_adc_dsp reads 8 channel data frames from fpga, calculates crosscorrelation to target.dat and sends the result to fpga as a single byte.  Operational mode depends on SW[3].  If SW[3] = 0 the program only sends the target threshold to the FPGA, and does not read FIFO. The FPGA calculated DSP target detection.   If SW[3] = 1, the program reads FIFO blocks, and performs DSP, signaling the result via a byte to the FPGA.  At any moment a FIFO data block can be read out from the FPGA and saved to a file as a time/data file name by pushing either push button.
