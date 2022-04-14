@@ -1,0 +1,1 @@
+plot "corr.dat" using 1:2 title "Az" w lines,"corr.dat" using 1:3 title "Ax" w lines,"corr.dat" using 1:5 title "dPz" w lines,"corr.dat" using 1:7 title "dPx" w lines,"corr.dat" using 1:8 title "wz" w lines,"corr.dat" using 1:9 title "wy" w lines

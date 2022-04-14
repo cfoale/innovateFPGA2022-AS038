@@ -1,0 +1,8 @@
+./hps_adc_dsp
+gnuplot -p plotcommands_dsp
+#
+
+
+
+
+
