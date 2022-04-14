@@ -1,6 +1,6 @@
  Intel Quartus and Linux LXDE HPS files
 
-DE10-Nano Quartus project file DE10_NANO_SoC_GHRD.qsf starts the Quartus 18.1 project.  Files in folder /hps are managed on Windows 10, using notepad++.  The Makefile is run under the Intel FPGA Embedded Command Shell 18.1, which emulates a Linux environment using Cygwin.  The cross-compiled Linux  hps_adc_dsp executable is copied over to the DE10-Nano LXDE root folder using Bitwise client,.  Other useful Linux commands for plotting results are in the subfolder hps/linux.  Example recorded data files are in the subfolder hps/data.
+DE10-Nano Quartus project file DE10_NANO_SoC_GHRD.qsf starts the Quartus 18.1 project.  Quartus project modules are Verilog.  Files in folder /hps are C files, using the Avalon bus to communicate with the DE10-Nano FPGA.  The C files are managed and cross-compiled on Windows 10, using notepad++.  The Makefile is run under the Intel FPGA Embedded Command Shell 18.1, which emulates a Linux environment using Cygwin.  The cross-compiled Linux  hps_adc_dsp executable is copied over to the DE10-Nano LXDE root folder using Bitwise client,.  Other useful Linux commands for plotting results are in the subfolder hps/linux.  Example recorded data files are in the subfolder hps/data.
 
 With the DE10-Nano Quartus output file loaded on the FPGA using Quartus Programmer, the Linux LXDE desktop terminal is used to execute hps_adc_dsp to set the FPGA drone upset target threshold and display real time upset events.
 
